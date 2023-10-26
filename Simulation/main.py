@@ -128,7 +128,7 @@ def main():
         #Calculate velocity of satellite every frame    
         satelliteVelocity=math.sqrt(satellite.x_vel**2 + satellite.y_vel**2)
 
-        win.blit(font1.render("Speed of the rocket: " + str(int(satelliteVelocity)) + " m/s",True,"Black"),(10,10))
+        win.blit(font1.render("Speed of the rocket: " + str(int(satelliteVelocity)) + " Km/s",True,"Black"),(10,10))
         
         if not initialThrust and finalThrust:
             counter+=constants.TIME_STEP
