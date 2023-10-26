@@ -81,7 +81,7 @@ def main():
                 if event.key == pygame.K_b and mars not in bodies:
                     bodies.append(mars)
 
-        win.fill((0,0,0))          
+        win.fill((205,205,205))          
 
         #determine if the satellite has reached the target orbit within the error bound to execute the final thrust
 
@@ -105,7 +105,7 @@ def main():
             count+=1
 
             for coord in coordinateList:
-                pygame.draw.circle(win, "white", (coord[0] + constants.SCREEN_WIDTH/2, coord[1] + constants.SCREEN_HEIGHT/2), 2)
+                pygame.draw.circle(win, "Black", (coord[0] + constants.SCREEN_WIDTH/2, coord[1] + constants.SCREEN_HEIGHT/2), 2)
                 
         #Initial orbit (Earth)
         pygame.draw.circle(win,"blue",(0 + constants.SCREEN_WIDTH/2,0 + constants.SCREEN_HEIGHT/2),r1*constants.SCALE,1)
@@ -128,12 +128,12 @@ def main():
         #Calculate velocity of satellite every frame    
         satelliteVelocity=math.sqrt(satellite.x_vel**2 + satellite.y_vel**2)
 
-        win.blit(font1.render("Speed of the rocket: " + str(int(satelliteVelocity)) + " m/s",True,"White"),(10,10))
+        win.blit(font1.render("Speed of the rocket: " + str(int(satelliteVelocity)) + " m/s",True,"Black"),(10,10))
         
         if not initialThrust and finalThrust:
             counter+=constants.TIME_STEP
             
-        win.blit(font1.render("Time: " + str(int(counter/(60*60*24))) + " days",True,"White"),(10,40))
+        win.blit(font1.render("Time: " + str(int(counter/(60*60*24))) + " days",True,"Black"),(10,40))
         mars.angle(satellite)
         
         pygame.display.update()
