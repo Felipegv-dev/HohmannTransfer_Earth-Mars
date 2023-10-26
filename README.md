@@ -1,1 +1,3 @@
 # HohmannTransfer_Earth-Mars
+In this project I show the skills acquired in mathematics, physics and programming throughout the 3 semesters taken.
+The challenge consisted of generating a simulation of how to go from Earth to Mars using the Hoffmann transfer. In the body and main module the concepts of physics and mathematics are applied. and throughout the project the component that I have best developed is reflected, which is programming.
